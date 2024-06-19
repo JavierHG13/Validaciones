@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Validacion de formularios</h1>
+
+    <div class="container">
+        <form action="" method="">
+
+            <label for="">Usuario:</label>
+            <input type="text" required minlength="5" maxlength="15" pattern="[a-zA-Z0-9]+" placeholder="@JavierHG" title="Solo se perimiten caracteres alfanumericos, sin dejar espacio."><br>
+
+            <label for="">Contraseña:</label>
+            <input type="password" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" title="Incluir al menos, un numero, una mayuscula y un caracter especial"><br>
+            
+            <label for="">Correo:</label>
+            <input type="emai" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]" title="Escribe un correo electronico valido" placeholder="ejemplo@mail.com"><br>
+
+            
+            <label for="">Telefono:</label>
+            <input type="tel" required maxlength="15" pattern="\+[0-9]" placeholder="+55 "><br>
+
+            <label for="">Fecha de nacimiento:</label>
+            <input type="text" required pattern="\d{4}-\d{2}-\d{2}""  title="Debe estar en el formato YYYY-MM-DD" placeholder="2002-03-06"><br>
+
+            <label for="">Codigo postal</label>
+            <input type="text" minlength="5" maxlength="5" required pattern="[0-9]+" placeholder="42090"><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+</body>
+</html>
